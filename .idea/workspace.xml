@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe696307-9b50-4ecb-b655-804f6255cf29" name="Default" comment="" />
+    <list default="true" id="fe696307-9b50-4ecb-b655-804f6255cf29" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webApp101/project1.html" afterPath="$PROJECT_DIR$/webApp101/project1.html" />
+    </list>
     <ignored path="hackerLabU.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1370396376498" ignored="false" />
+    <file path="/project1.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1370397059116" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,7 @@
       <file leaf-file-name="project1.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webApp101/project1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="27" selection-start="328" selection-end="328" vertical-scroll-proportion="0.38659793">
+            <state line="23" column="16" selection-start="438" selection-end="438" vertical-scroll-proportion="0.44458762">
               <folding />
             </state>
           </provider>
@@ -46,6 +49,13 @@
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/webApp101/project1.html" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -220,7 +230,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/webApp101/project1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="328" selection-end="328" vertical-scroll-proportion="0.38659793">
+        <state line="23" column="16" selection-start="438" selection-end="438" vertical-scroll-proportion="0.44458762">
           <folding />
         </state>
       </provider>

@@ -11,21 +11,37 @@
 
 		<h1>Project 5</h1>
 
-		<p id="myparagraph"></p>
+        <p id="myparagraph1"></p>
+        <p id="myparagraph2"></p>
+        <p id="myparagraph3"></p>
 
-		<button id="filltext">Make text appear</button>
+		<button id="filltext1">Make text appear</button>
+        <button id="filltext2">Make text appear</button>
+        <button id="filltext3">Make text appear</button>
+
 
 		<script type="text/javascript">
-			var msg = "Hello World!";
+			var msg1 = "Hello World!";
+            var msg2 = "Hello Again!";
+            var msg3 = "Hello from The App Chicks!";
 
-			// Select the button we have by ID. The variable 'button' represents
+			// Select the button we hav
+			// e by ID. The variable 'button' represents
 			// the button and all information associated with it.
-			var button = document.getElementById('filltext');
-			
+            var button1 = document.getElementById('filltext1');
+            var button2 = document.getElementById('filltext2');
+            var button3 = document.getElementById('filltext3');
+
 			// When 'button' is clicked, run this function.
-			button.onclick = function () {
-				document.getElementById('myparagraph').innerHTML = msg;
+			button1.onclick = function () {
+				document.getElementById('myparagraph1').innerHTML = msg1;
 			};
+            button2.onclick = function () {
+                document.getElementById('myparagraph2').innerHTML = msg2;
+            };
+            button3.onclick = function () {
+                document.getElementById('myparagraph3').innerHTML = msg3;
+            };
 		</script>
 	</body>
 </html>

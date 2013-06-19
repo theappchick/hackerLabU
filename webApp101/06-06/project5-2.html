@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project 4</title>
+        <style>
+        </style>
+    </head>
+    <body>
+      
+   <h1>Project 5</h1>
+   
+    <p id="myparagraph"></p>
+    
+        <button id="filltext">Ready</button>
+                    <button id="filltext2">Set</button>
+                        <button id="filltext3">Go</button>
+    
+    <script type="text/javascript">
+        var msg1 = "Are you ready";
+               
+                 var msg2 = "Are you sure";
+                 
+                            var msg3 = "OK..Do IT!";
+        
+        // Select the button we have by ID. The variable 'button' represents
+        
+        // the button and all information associated with it.
+        
+        var button = document.getElementById('filltext');
+        
+        // When 'button' is clicked, run this function.
+        button.onclick = function () {
+        document.getElementById('myparagraph').innerHTML = msg1;
+        };
+        
+                    var button2 = document.getElementById('filltext2');
+                   
+                   // When 'button' is clicked, run this function.
+                   button2.onclick = function () {
+                   document.getElementById('myparagraph').innerHTML = msg2;
+                   };
+                   
+                            var button3 = document.getElementById('filltext3');
+                           
+                           // When 'button' is clicked, run this function.
+                           button3.onclick = function () {
+                           document.getElementById('myparagraph').innerHTML = msg3;
+                           };
+                   
+
+
+        </script>
+</body>
+</html>

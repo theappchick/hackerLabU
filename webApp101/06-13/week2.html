@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery!</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			#main {
+				width: 800px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#box-a {
+				background-color: #686229;
+			}
+
+			#box-b {
+				background-color: green;
+			}
+
+			#box-c {
+				background-color: blue;
+			}
+
+			#box-d {
+				background-color: #c5be2f;
+			}
+			#box-e {
+				background-color: black;
+				font-size: 50px;
+			}
+
+			.box {
+				width: 250px;
+				height: 100px;
+				margin: 10px 0;
+				padding: 10px;
+				color: white;
+				border-radius: 10px;
+				box-shadow: 4px 2px 5px #888;
+			}
+
+			.box a {
+				color: white;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="main">
+			<h1>Hello jQuery!</h1>
+			
+			<div id="box-a" class="box">
+				<span id="box-a-content">Who are you?</span>
+				<br>
+				<br>
+				<button id="box-a-btn">Click me!</button>
+			</div>
+
+			<div id="box-b" class="box">
+				<span id="box-a-content">What is your name?</span>
+				<input type="text" id="yourname" value="">
+
+				<button id="box-b-btn">Submit</button>
+			</div>
+
+			<div id="box-c" class="box">
+				That's not your name
+				<br><br>
+				<button id="box-c-btn">Click me!</button>
+			</div>
+
+			<div id="box-d" class="box">
+				What's your favourite food?
+				<br>
+				<select id="food">
+					<option value="the best food ever">pizza</option>
+					<option value="amazing balls">brownies</option>
+					<option value="yummy">ice cream</option>
+					<option value="taco tuesday">cupcakes</option>
+					<option value="sucks balls">kale</option>
+				</select>
+			</div>
+			
+			<div id="box-e" class="box">
+				hello
+				
+				
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+
+			/*
+			 * Box A
+			 */
+			// jQuery
+			$('#box-a-btn').on('click', function () {
+				$('#box-a-content').html('Doctor Who?');
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-a-btn').onclick = function () {
+				document.getElementById('box-a-content').innerHTML = 'The Doctor!';
+			};
+*/
+			/*
+			 * Box B
+			 */
+			// jQuery
+			$('#box-b-btn').on('click', function () {
+				var name = $('#yourname').val();
+
+				if (name.length != 0) {
+					alert("I'm " + name + "!");
+				}
+				else {
+					alert("your favourite food sucks!");
+				}
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-b-btn').onclick = function () {
+				var name = document.getElementById('box-a-content').value;
+				if (name.length != 0) {
+					alert("I'm " + name + "!");
+				}
+				else {
+					alert("You didn't enter a name!");
+				}
+			};
+*/
+
+			/*
+			 * Box C
+			 */
+			// jQuery
+			$('#box-c-btn').on('click', function () {
+				$('#yourname').val('stephanie');
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-c-btn').onclick = function () {
+				document.getElementById('yourname').value = 'The Doctor';
+			};
+*/
+
+			/*
+			 * Box D
+			 */
+			// jQuery
+			$('#food').on('change', function () {
+				//var color = $('#color').val();
+				var food = $ (this).val();
+				
+				alert("  "+ food )
+			});
+			
+			/*
+			 * Box E
+			 */
+			// jQuery
+			
+			$('favfood').on ('change', function () {
+				//stuff
+			});
+			
+			$('#box-e') .on('mouseover', function() {
+				$('#box-e').html('Doggie');				
+				
+			});
+			
+			$('#box-e') .on('mouseout', function() {
+				$('#box-e').html('FEED ME');
+				
+				
+			});
+			
+
+		</script>
+	</body>
+</html>

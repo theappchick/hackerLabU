@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cross the bridge</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+		<style>
+			body {
+				background-color: #DDDDDD;
+			}
+
+			#main {
+				width: 90%;
+				margin: 0 auto 10px auto;
+				padding: 10px;
+				background-color: white;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+				box-shadow: 2px 2px 3px #888;
+			}
+
+			.prompt {
+				border-radius: 15px;
+				color: white;
+				font-weight: bold;
+				display: none;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#q1 {
+				background-color: blue;
+			}
+
+			#q2 {
+				background-color: blue;
+			}
+
+			#q3 {
+				background-color: blue;
+			}
+
+			.good {
+				background-color: green;
+			}
+			
+			.bad {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h1>Stop!</h1>
+			<p>
+				He who approaches the bridge of death must answer me these questions three, 'ere the other side he see.
+				<br><br>
+				<button id="askme">Ask me the questions</button>
+			</p>
+
+			<div id="q1" class="prompt">
+				1) What is your name?
+				<br><br>
+				<input type="text" name="name">
+				<button id="q1-btn">Submit</button>
+			</div>
+
+			<div id="q2" class="prompt">
+				2) What is your quest?
+				<br><br>
+				<input type="text" name="quest">
+				<button id="q2-btn">Submit</button>
+			</div>
+
+			<div id="q3" class="prompt">
+				2) What is your favorite color?
+				<br><br>
+				<select id="q3-select">
+					<option selected>Choose wisely...</option>
+					<option value="1">Red</option>
+					<option value="1">Orange</option>
+					<option value="1">Yellow</option>
+					<option value="1">Green</option>
+					<option value="1">Blue</option>
+					<option value="1">Purple</option>
+					<option value="0">Blue, wait Yellow!</option>
+				</select>
+			</div>
+
+			<div id="result" class="prompt">
+			
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" ></script>
+		<script>
+			$('#askme').on('click', function () {
+				// 'this' refers to the button
+				$(this).hide(); // hides  the button from view
+
+				// Display the first question!
+				$('#q1').slideDown(); // slide down reveals the box with a sliding animation
+			});
+
+			$('#q1-btn').on('click', function () {
+				// 'this' is the button
+				// .parent() will select the button's parent HTML element, or
+				// the div in which it lives in (#q1). 
+				$(this).parent().slideUp(); // slideUp (opposite of slideDown) hides it
+
+				$('#q2').slideDown(); // show the next question
+			});
+
+			$('#q2-btn').on('click', function () {
+				$(this).parent().slideUp();
+				$('#q3').slideDown();
+			});
+
+			// We're using a select box without a button, so we're going to 
+			// submit our answer with a 'change' event
+			$('#q3-select').on('change', function () {
+				$(this).parent().slideUp();
+				// again, 'this' is the element we've selected above, the select
+				// box, so we can call .val() on it to get the selected value
+				if ($(this).val() == 1) {
+					// Chaining jQuery
+					$('#result')
+						.addClass('good') // no semicolon... we still have more functions to chain below
+						.html('Off you go!')
+						.slideDown();
+
+				/*	The above is the same as:
+					$('#result').addClass('good');
+					$('#result').html('Off you go!'); 
+					$('#result').slideDown();    */
+				}
+				else {
+					$('#result')
+						.addClass('bad')
+						.html('AAAAHHHHH! (falls into gorge of doom)')
+						.slideDown();
+				}
+			});
+		</script>
+	</body>
+</html>

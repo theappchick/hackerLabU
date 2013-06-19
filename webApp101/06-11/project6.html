@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Events!</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			#main {
+				width: 800px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#box-a {
+				background-color: red;
+			}
+
+			#box-b {
+				background-color: green;
+			}
+
+			#box-c {
+				background-color: blue;
+			}
+
+			#box-d {
+				background-color: yellow;
+			}
+
+			.box {
+				width: 200px;
+				height: 100px;
+				margin: 10px 0;
+				padding: 10px;
+				color: white;
+			}
+
+			.box a {
+				color: white;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="main">
+			<h1>Hello, Events</h1>
+
+			<div id="box-a" class="box">
+				Click this box to change its color
+			</div>
+
+			<div id="box-b" class="box">
+				Hover in this box!
+			</div>
+
+			<div id="box-c" class="box">
+				<button id="change-box-c">Change the link below</button>
+				<br>
+				<br>
+				<a href="http://www.google.com" id="box-c-link">Google</a>
+			</div>
+
+			<div id="box-d" class="box">
+				<button id="change-box-d">Make this box bigger!</button>
+			</div>
+
+			<hr>
+
+			
+		</div>
+
+		<script>
+			// onclick event bound to a button
+			var boxA = document.getElementById('box-a');
+			boxA.onclick = function () {
+				// "this" is a special variable that referes to the "boxA" variable we created.
+				this.style.backgroundColor = '#00FF00';
+			};
+
+			// onmouseover event
+			var boxB = document.getElementById('box-b');
+
+			boxB.onmouseover = function () {
+				this.innerHTML = 'Now un-hover...';
+			};
+			// onmouseover event
+			boxB.onmouseout = function () {
+				this.innerHTML = 'Hover in this box!';
+			};
+
+			// onmouseover event
+			var boxCBtn = document.getElementById('change-box-c');
+			boxCBtn.onclick = function () {
+				document.getElementById('box-c-link').href = 'http://hackerlab.org';
+				document.getElementById('box-c-link').innerHTML = 'Hacker Lab';
+			};
+
+			// onmouseover event
+			var boxDBtn = document.getElementById('change-box-d');
+			boxDBtn.onclick = function () {
+				document.getElementById('box-d').style.width = '500px';
+			};
+		</script>
+	</body>
+</html>

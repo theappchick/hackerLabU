@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Questions!</title>
+
+		<link href="bootstrap.min.css" rel="stylesheet">
+
+		<style>
+			body {
+				background-color: #DDDDDD;
+			}
+
+			#main {
+				width: 90%;
+				margin: 0 auto 10px auto;
+				padding: 10px;
+				background-color: white;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+				box-shadow: 2px 2px 3px #888;
+			}
+
+			.prompt {
+				border-radius: 15px;
+				color: white;
+				font-weight: bold;
+				display: none;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#q1 {
+				background-color: blue;
+			}
+
+			#q2 {
+				background-color: blue;
+			}
+
+			#q3 {
+				background-color: blue;
+			}
+
+			.good {
+				background-color: green;
+			}
+			
+			.bad {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h1>Questions!</h1>
+			<p>
+				<button id="askme">Ask me the questions</button>
+			</p>
+
+			<div id="q1" class="prompt">
+				1) Question 1
+				<br><br>
+				<input type="text" name="question1">
+				<button id="q1-btn">Submit</button>
+			</div>
+
+			<div id="q2" class="prompt">
+				2) Question 2
+				<br><br>
+				<input type="text" name="question2">
+				<button id="q2-btn">Submit</button>
+			</div>
+
+			<div id="q3" class="prompt">
+				3) Question 3
+				<br><br>
+				<input type="text" name="question3">
+				<button id="q3-btn">Submit</button>
+			</div>
+
+			<div id="q3" class="prompt">
+				4) Question 4
+				<br><br>
+				<input type="text" name="question3">
+				<button id="q3-btn">Submit</button>
+			</div>
+
+			<div id="result" class="prompt">
+			
+			</div>
+		</div>
+
+		<script src="jquery.min.js" ></script>
+		<script>
+			$('#askme').on('click', function () {
+				// Hide this button
+				// Display the first question
+			});
+
+			$('#q1-btn').on('click', function () {
+				// Hide this question
+				// Display next question
+			});
+
+			$('#q2-btn').on('click', function () {
+				// Hide this question
+				// Display next question
+			});
+
+			$('#q3-btn').on('click', function () {
+				// Hide this question
+				// Display next question
+			});
+
+			$('#q4-btn').on('click', function () {
+				// Hide this question
+				// Gather the data...
+				// If you have a question with an input box nammed "question1"
+				// select it by using this selector in jQuery: http://api.jquery.com/attribute-equals-selector/
+				// $('[name="question1"]')
+				// then call .val() to get the value...
+			
+				var q1Result = $('[name="question1"]').val();
+				// ... 
+			});
+
+		</script>
+	</body>
+</html>

@@ -38,8 +38,12 @@
 			}
 
 			#q3 {
-				background-color: #e9322d;
-			}
+                 background-color: #e9322d;
+             }
+
+            #q4 {
+                background-color: #999999;
+            }
 
 			.good {
 				background-color: green;
@@ -61,31 +65,38 @@
 			</p>
 
 			<div id="q1" class="prompt">
-				1) Question 1
+				1) What is your last name?
 				<br><br>
 				<input type="text" name="question1">
 				<button id="q1-btn">Submit</button>
 			</div>
 
 			<div id="q2" class="prompt">
-				2) Question 2
+				2) How about your first Name?
 				<br><br>
 				<input type="text" name="question2">
 				<button id="q2-btn">Submit</button>
 			</div>
 
 			<div id="q3" class="prompt">
-				3) Question 3
+				3) When will you retire?
 				<br><br>
+
 				<input type="text" name="question3">
 				<button id="q3-btn">Submit</button>
 			</div>
 
-			<div id="q3" class="prompt">
-				4) Question 4
+			<div id="q4" class="prompt">
+				4) Why?
 				<br><br>
-				<input type="text" name="question3">
-				<button id="q3-btn">Submit</button>
+                <select id="q4-select">
+                    <option selected>Choose wisely...</option>
+                    <option value="I have no savings. ">I have no savings. </option>
+                    <option value="I love to work">I love to work</option>
+                    <option value="Nothing better to do">Nothing better to do</option>
+
+                </select>
+
 			</div>
 
 			<div id="result" class="prompt">
@@ -93,7 +104,7 @@
 			</div>
 		</div>
 
-		<script src="jquery.min.js" ></script>
+		<script src="../res/jquery.min.js" ></script>
 		<script>
 			$('#askme').on('click', function () {
                 // Hide this button
@@ -108,34 +119,66 @@
                 // 'this' is the button
                 // .parent() will select the button's parent HTML element, or
                 // the div in which it lives in (#q1).
-			});
 
-			$('#q1-btn').on('click', function () {
-				// Hide this question
-				// Display next question
+                // 'this' is the button
+                // .parent() will select the button's parent HTML element, or
+                // the div in which it lives in (#q1).
+                $(this).parent().slideUp(); // slideUp (opposite of slideDown) hides it
+
+                $('#q2').slideDown(); // show the next question
 			});
 
 			$('#q2-btn').on('click', function () {
 				// Hide this question
 				// Display next question
+                $(this).parent().slideUp();
+                $('#q3').slideDown();
 			});
 
 			$('#q3-btn').on('click', function () {
 				// Hide this question
 				// Display next question
+                $(this).parent().slideUp();
+                $('#q4').slideDown();
 			});
 
-			$('#q4-btn').on('click', function () {
-				// Hide this question
-				// Gather the data...
-				// If you have a question with an input box named "question1"
-				// select it by using this selector in jQuery: http://api.jquery.com/attribute-equals-selector/
-				// $('[name="question1"]')
-				// then call .val() to get the value...
-			
-				var q1Result = $('[name="question1"]').val();
-				// ... 
-			});
+
+            // We're using a select box without a button, so we're going to
+            // submit our answer with a 'change' event
+            $('#q4-select').on('change', function () {
+                $(this).parent().slideUp();
+                // again, 'this' is the element we've selected above, the select
+                // box, so we can call .val() on it to get the selected value
+
+                    /*	The above is the same as:
+                     $('#result').addClass('good');
+                     $('#result').html('Off you go!');
+                     $('#result').slideDown();    */
+
+
+                    // Hide this question
+                    // Gather the data...
+                    // If you have a question with an input box named "question1"
+                    // select it by using this selector in jQuery: http://api.jquery.com/attribute-equals-selector/
+                    // $('[name="question1"]')
+                    // then call .val() to get the value...
+                    var q1Result = $('[name="question1"]').val();
+                    var q2Result = $('[name="question2"]').val();
+                    var q3Result = $('[name="question3"]').val();
+                    var q4Result = $('#q4-select').val();
+
+
+                        $('#result')
+                               // .addClass('bad')
+                                .addClass('good')
+                                .html('Question 1: ' + q1Result + '<br>'
+                                + 'Question 2: ' + q2Result + '<br>'
+                                        + 'Question 3: ' + q3Result + '<br>'
+                                        + 'Question 4: ' + q4Result + '<br>')
+                                .slideDown();
+
+                }
+            );
 
 		</script>
 	</body>

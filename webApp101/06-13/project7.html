@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery!</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			#main {
+				width: 800px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#box-a {
+				background-color: red;
+			}
+
+			#box-b {
+				background-color: green;
+			}
+
+			#box-c {
+				background-color: blue;
+			}
+
+			#box-d {
+				background-color: #666666;
+			}
+
+			.box {
+				width: 250px;
+				height: 100px;
+				margin: 10px 0;
+				padding: 10px;
+				color: white;
+				border-radius: 15px;
+				box-shadow: 2px 2px 5px #888;
+			}
+
+			.box a {
+				color: white;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="main">
+			<h1>Hello jQuery!</h1>
+			
+			<div id="box-a" class="box">
+				<span id="box-a-content">Who are you?</span>
+				<br>
+				<br>
+				<button id="box-a-btn">Click me!</button>
+			</div>
+
+			<div id="box-b" class="box">
+				<span id="box-a-content">What is your name?</span>
+				<input type="text" id="yourname" value="">
+
+				<button id="box-b-btn">Submit</button>
+			</div>
+
+			<div id="box-c" class="box">
+				That's not your name
+				<br><br>
+				<button id="box-c-btn">Click me!</button>
+			</div>
+
+			<div id="box-d" class="box">
+				What's your favourite color?
+				<br>
+				<select id="color">
+					<option value="#666666">Grey</option>
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+					<option value="yellow">Yellow</option>
+				</select>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+
+			/*
+			 * Box A
+			 */
+			// jQuery
+			$('#box-a-btn').on('click', function () {
+				$('#box-a-content').html('Doctor Who?');
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-a-btn').onclick = function () {
+				document.getElementById('box-a-content').innerHTML = 'The Doctor!';
+			};
+*/
+			/*
+			 * Box B
+			 */
+			// jQuery
+			$('#box-b-btn').on('click', function () {
+				var name = $('#yourname').val();
+
+				if (name.length != 0) {
+					alert("I'm " + name + "!");
+				}
+				else {
+					alert("You didn't enter a name!");
+				}
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-b-btn').onclick = function () {
+				var name = document.getElementById('box-a-content').value;
+				if (name.length != 0) {
+					alert("I'm " + name + "!");
+				}
+				else {
+					alert("You didn't enter a name!");
+				}
+			};
+*/
+
+			/*
+			 * Box C
+			 */
+			// jQuery
+			$('#box-c-btn').on('click', function () {
+				$('#yourname').val('The Doctor');
+			});
+
+			// Normal JavaScript
+/*			document.getElementById('box-c-btn').onclick = function () {
+				document.getElementById('yourname').value = 'The Doctor';
+			};
+*/
+
+			/*
+			 * Box D
+			 */
+			// jQuery
+			$('#color').on('change', function () {
+				var color = $('#color').val();
+				$('#box-d').css('background-color', color);
+			});
+
+		</script>
+	</body>
+</html>

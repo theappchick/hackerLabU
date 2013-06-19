@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Answer These Questions!</title>
+		<title>Questions!</title>
 
-		<link href="../res/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap.min.css" rel="stylesheet">
 
 		<style>
 			body {
@@ -30,15 +30,15 @@
 			}
 
 			#q1 {
-				background-color: blueviolet;
+				background-color: blue;
 			}
 
 			#q2 {
-				background-color: #c43c35;
+				background-color: blue;
 			}
 
 			#q3 {
-				background-color: #e9322d;
+				background-color: blue;
 			}
 
 			.good {
@@ -52,10 +52,7 @@
 	</head>
 	<body>
 		<div id="main">
-			<h1>Answer These Questions!</h1>
-            <p>
-                She who approaches the bridge of death must answer me these questions three, 'ere the other side she see.
-            </p>
+			<h1>Questions!</h1>
 			<p>
 				<button id="askme">Ask me the questions</button>
 			</p>
@@ -96,18 +93,8 @@
 		<script src="jquery.min.js" ></script>
 		<script>
 			$('#askme').on('click', function () {
-                // Hide this button
-                // 'this' refers to the button
-                $(this).hide(); // hides  the button from view
-
-                // Display the first question!
-                $('#q1').slideDown(); // slide down reveals the box with a sliding animation
-            });
-
-            $('#q1-btn').on('click', function () {
-                // 'this' is the button
-                // .parent() will select the button's parent HTML element, or
-                // the div in which it lives in (#q1).
+				// Hide this button
+				// Display the first question
 			});
 
 			$('#q1-btn').on('click', function () {
@@ -128,7 +115,7 @@
 			$('#q4-btn').on('click', function () {
 				// Hide this question
 				// Gather the data...
-				// If you have a question with an input box named "question1"
+				// If you have a question with an input box nammed "question1"
 				// select it by using this selector in jQuery: http://api.jquery.com/attribute-equals-selector/
 				// $('[name="question1"]')
 				// then call .val() to get the value...

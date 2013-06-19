@@ -138,7 +138,7 @@
 			$('#q3-btn').on('click', function () {
 				// Hide this question
 				// Display next question
-                $(this).parent().slideUp();
+                $(this).parent().fadeOut();
                 $('#q4').slideDown();
 			});
 
@@ -146,7 +146,7 @@
             // We're using a select box without a button, so we're going to
             // submit our answer with a 'change' event
             $('#q4-select').on('change', function () {
-                $(this).parent().slideUp();
+                $(this).parent().fadeOut();
                 // again, 'this' is the element we've selected above, the select
                 // box, so we can call .val() on it to get the selected value
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Questions!</title>
+
+		<link href="bootstrap.min.css" rel="stylesheet">
+
+		<style>
+			body {
+				background-color: #DDDDDD;
+			}
+
+			#main {
+				width: 90%;
+				margin: 0 auto 10px auto;
+				padding: 10px;
+				background-color: white;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+				box-shadow: 2px 2px 3px #888;
+			}
+
+			.prompt {
+				border-radius: 15px;
+				color: white;
+				font-weight: bold;
+				display: none;
+				margin: 0 auto;
+				padding: 10px;
+			}
+
+			#q1 {
+				background-color: pink;
+			}
+
+			#q2 {
+				background-color: yellow;
+			}
+
+			#q3 {
+				background-color: blue;
+			}
+
+			#q4 {
+				background-color: orange;
+			}
+
+			#result {
+				background-color: green;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<h1>Questions!</h1>
+			<p>
+				<button id="askme">Ask me the questions</button>
+			</p>
+
+			<div id="q1" class="prompt">
+				1) Question 1
+				<br><br>
+				<input type="text" name="question1">
+				<button id="q1-btn">Submit</button>
+			</div>
+
+			
+			<div id="q2" class="prompt">
+				2) Question 2
+				<br><br>
+				<input type="text" name="question2">
+				<button id="q2-btn">Submit</button>
+			</div>
+
+			<div id="q3" class="prompt">
+				3) Question 3
+				<br><br>
+				<input type="text" name="question3">
+				<button id="q3-btn">Submit</button>
+			</div>
+
+			<div id="q4" class="prompt">
+				4) Question 4
+				<br><br>
+				<input type="text" name="question4">
+				<button id="q4-btn">Submit</button>
+			</div>
+
+			<div id="result" class="prompt">
+			
+			</div>
+		</div>
+
+		<script src="jquery.min.js" ></script>
+		<script>
+			$('#askme').on('click', function () {
+				$(this).hide(); // hide 'this' element (it's a button): http://api.jquery.com/hide/
+				
+				$('#q1').slideDown(); // reveal with slide down: http://api.jquery.com/slideDown/
+			});
+
+			$('#q1-btn').on('click', function () {
+				$('#q1').slideUp(); // hide with slide up http://api.jquery.com/slideUp/
+
+				$('#q2').slideDown(); // reveal with slide down
+			});
+
+			$('#q2-btn').on('click', function () {
+				$('#q2').slideUp();
+
+				$('#q3').slideDown();
+			});
+
+			$('#q3-btn').on('click', function () {
+				$('#q3').slideUp();
+
+				$('#q4').slideDown()
+			});
+
+			$('#q4-btn').on('click', function () {
+				$('#q4').slideUp();
+			
+				// http://api.jquery.com/attribute-equals-selector/
+				// http://api.jquery.com/val/
+				var q1Result = $('[name="question1"]').val(); 
+				var q2Result = $('[name="question2"]').val();  
+				var q3Result = $('[name="question3"]').val();  
+				var q4Result = $('[name="question4"]').val();  
+
+				var responce = 'Question 1: ' + q1Result + '<br>';
+				responce += 'Question 2: ' + q2Result + '<br>';
+				responce += 'Question 3: ' + q3Result + '<br>';
+				responce += 'Question 4: ' + q4Result + '<br>';
+
+				$('#result').html(responce).slideDown();
+			});
+
+		</script>
+	</body>
+</html>

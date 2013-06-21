@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Conversions</title>
+
+		<!--
+			We're using a CDN (content delivery network) to serve bootstrap.
+			Remember, we can actually host this locally as well.
+		-->
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+		<style>
+			/* this is special... it selects all elements */
+			* {
+				margin: 0;
+				padding: 0; 
+			}
+
+			body {
+				background-color: #EEEEEE;
+			}
+
+			#main {
+				background-color: #FFFFFF;
+				padding: 10px;
+				width: 350px;
+				margin: 10px auto;
+				border-radius: 15px;
+				border-radius: 15px;
+				box-shadow: 2px 2px 3px #888;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="main">
+			<h1>Conversions</h1>
+
+			<!--
+				<form>s are the traditional way to encapsulate your input tags.
+				Each convertion has its own <form> tag
+			-->
+
+			<h3>Inches to Feet</h3>
+			<form class="form-inline" id="inches-feet"> <!-- make sure there is a different ID for each conversion -->
+				<input class="input-small from" type="text" placeholder="inches">
+				<button class="btn">-></button> 
+				<input class="input-small to" type="text" placeholder="feet" disabled>
+			</form>
+
+			<h3>Feet to Miles</h3>
+			<form class="form-inline" id="feet-mile"> <!-- make sure there is a different ID for each conversion -->
+				<input class="input-small from" type="text" placeholder="feet">
+				<button class="btn">-></button> 
+				<input class="input-small to" type="text" placeholder="mile" disabled>
+			</form>
+
+			<h3>Fahrenheit to Celsius</h3>
+			<form class="form-inline" id="fahr-celsius"> <!-- make sure there is a different ID for each conversion -->
+				<input class="input-small from" type="text" placeholder="fahrenheit">
+				<button class="btn">-></button> 
+				<input class="input-small to" type="text" placeholder="celsius" disabled>
+			</form>
+
+
+
+			
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			/*
+				When you submit a form (click a button in it), it fire an event
+				called 'submit'. usually this goes to a secondary page, but we
+				don't want that to happen. We let JavaScript capture the submit
+				event and 
+			*/
+			$('#inches-feet').on('submit', function (e) { // this parameter called 'e' is key... it's the event data.
+				e.preventDefault(); // this prevents the page from being reloaded
+				
+				// We gave our from units a 'from' class
+				// select the 'from' class from the form tag, aka "this"
+				var inches = $(this).children('.from').val(); 
+				inches = parseInt(inches); // We use parseInt() to take the string value and turn it into a number
+				var feet = inches / 12;
+				$(this).children('.to').val(feet); // set val 
+			});
+		
+			
+			// Feet -> Miles
+			$('#feet-mile').on('submit', function (e) { 
+				e.preventDefault();
+				var feet = $(this).children('.from').val(); 
+				feet = parseInt(feet); 
+				var miles = feet  / 5280; // One mile is equal to 5,280 feet, for some unknown reason.
+				$(this).children('.to').val(miles); 
+			});
+
+			//Fahrenheit to Celsius
+			$('#fahr-celsius').on('submit', function (e) { 
+				e.preventDefault();
+				var fahrenheit = $(this).children('.from').val(); 
+				fahrenheit = parseInt(fahrenheit); 		
+				var celsius = (fahrenheit - 32) * (5/9) ; //Celsius is Fahrenheit minus 32 and then multiplied by (5/9).. somehow.
+				$(this).children('.to').val(celsius);  
+			});
+
+			
+			/*
+				Now do it yourself: Make a conversion form using the submit event. 
+				Some ideas of conversions: feet -> yard, cups -> ounces, kilograms -> pounds.
+				Expertway odemay (do at home!): Create a pig latin converter. This will involve some string manipulation. 
+				Use google (or better, DuckDuckGo) to find resources/algorithms/code to help 
+			*/
+
+
+		</script>
+
+	</body>
+</html>

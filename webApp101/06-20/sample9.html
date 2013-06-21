@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculator</title>
+
+		<!--
+			We're using a CDN (content delivery network) to serve bootstrap.
+			Remember, we can actually host this locally as well.
+		-->
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+		<style>
+			/* this is special... it selects all elements */
+			* {
+				margin: 0;
+				padding: 0; 
+			}
+
+			body {
+				background-color: #EEEEEE;
+			}
+
+			#main {
+				background-color: #FFFFFF;
+				padding: 10px;
+				width: 170px;
+				margin: 30px auto;
+				border-radius: 15px;
+				border-radius: 15px;
+				box-shadow: 2px 2px 3px #888;
+			}
+
+			#calc-display {
+				text-align: right;
+			}
+	
+			.calc-row {
+				margin-top: 10px;
+			}
+			
+			#equals-button {
+				width: 72px;
+			}	
+		</style>
+	</head>
+	<body>
+
+	<div id="main">
+		<div id="display">
+			<!-- http://twitter.github.io/bootstrap/base-css.html#forms -->
+			<!-- this class is created by bootstrap for us to use -->
+			<input id="calc-display" class="input-medium" type="text" disabled> 
+		</div>
+
+		<div class="calc-row"> <!-- row 1 -->
+			<!--
+				This button has multiple classes. The 'btn' class is something
+				bootstrap creates, the 'item' class is something we created
+			-->
+			<button class="btn item">7</button> 
+			<button class="btn item">8</button> 
+			<button class="btn item">9</button>
+			<button class="btn btn-primary item">+</button> 
+		</div>
+
+		<div class="calc-row"> <!-- row 2 -->
+			<button class="btn item">4</button> 
+			<button class="btn item">5</button> 
+			<button class="btn item">6</button> 
+			<button class="btn btn-primary item">-</button> 
+		</div>
+
+		<div class="calc-row"> <!-- row 3 -->
+			<button class="btn item">1</button> 
+			<button class="btn item">2</button> 
+			<button class="btn item">3</button> 
+			<button class="btn btn-primary item">*</button> 
+		</div>
+
+		<div class="calc-row"> <!-- row 4 -->
+			<button class="btn item">0</button> 
+			<button id="equals-button" class="btn btn-success">=</button>
+			<button class="btn btn-primary item">/</button> 
+		</div>
+		
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('.item').on('click', function () {
+				var item = $(this).html(); // get the innerHTML of the button pressed.
+				var currentValue = $('#calc-display').val(); // save the current value
+				$('#calc-display').val(currentValue +  item); // put the current value back in with the new item
+			});
+
+			$('#equals-button').on('click', function () {
+				var result = eval( $('#calc-display').val() ); // grab the HTML, eval() it, store it result
+	
+				$('#calc-display').val(result); // replace the innerHTML with the result
+			});
+		</script>
+
+	</body>
+</html>

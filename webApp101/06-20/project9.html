@@ -45,23 +45,30 @@
 			<h3>Inches to Feet</h3>
 			<form class="form-inline" id="inches-feet"> <!-- make sure there is a different ID for each conversion -->
 				<input class="input-small from" type="text" placeholder="inches">
-				<button class="btn">-></button> 
+				<button class="btn">---></button>
 				<input class="input-small to" type="text" placeholder="feet" disabled>
 			</form>
 
 			<h3>Feet to Miles</h3>
 			<form class="form-inline" id="feet-mile"> <!-- make sure there is a different ID for each conversion -->
 				<input class="input-small from" type="text" placeholder="feet">
-				<button class="btn">-></button> 
+				<button class="btn">---></button>
 				<input class="input-small to" type="text" placeholder="mile" disabled>
 			</form>
 
 			<h3>Fahrenheit to Celsius</h3>
 			<form class="form-inline" id="fahr-celsius"> <!-- make sure there is a different ID for each conversion -->
 				<input class="input-small from" type="text" placeholder="fahrenheit">
-				<button class="btn">-></button> 
+				<button class="btn">---></button>
 				<input class="input-small to" type="text" placeholder="celsius" disabled>
 			</form>
+
+            <h3>Feet to Yards</h3>
+            <form class="form-inline" id="feet-yards"> <!-- make sure there is a different ID for each conversion -->
+                <input class="input-small from" type="text" placeholder="feet">
+                <button class="btn">---></button>
+                <input class="input-small to" type="text" placeholder="yards" disabled>
+            </form>
 
 
 
@@ -78,7 +85,7 @@
 				event and 
 			*/
 			$('#inches-feet').on('submit', function (e) { // this parameter called 'e' is key... it's the event data.
-				e.preventDefault(); // this prevents the page from being reloaded
+				e.preventDefault(); // ****this prevents the page from being reloaded/refreshed*****  (won't see the output if you don't prevent this)
 				
 				// We gave our from units a 'from' class
 				// select the 'from' class from the form tag, aka "this"
@@ -107,14 +114,39 @@
 				$(this).children('.to').val(celsius);  
 			});
 
+
+            //Feet to yards
+            $('#feet-yards').on('submit', function (e) {
+                e.preventDefault();
+                var feet = $(this).children('.from').val();
+                feet = parseInt(feet);
+                var yards = feet / 3 ; //There are 3 feet in a yard.  Divide the # of feet by 3 to get yards.
+                $(this).children('.to').val(yards);
+            });
+
 			
 			/*
 				Now do it yourself: Make a conversion form using the submit event. 
 				Some ideas of conversions: feet -> yard, cups -> ounces, kilograms -> pounds.
-				Expertway odemay (do at home!): Create a pig latin converter. This will involve some string manipulation. 
-				Use google (or better, DuckDuckGo) to find resources/algorithms/code to help 
+
+                http://www.snowcrest.net/donnelly/piglatin.html
+				Expertway odemay (do at home!): Create a pig latin converter. This will involve some string manipulation.
+				Use google (or better, DuckDuckGo) to find resources/algorithms/code to help
+             http://www.webdeveloper.com/forum/showthread.php?253432-Yet-another-code-for-Pig-Latin-converter/page2
 			*/
 
+
+             /*    LOL
+            Youre = {
+                STILL_not_getting_it:function(){
+                    alert("YOU, the original poster / thread starter NEED to POST the code and NOT a LINK.");
+                },
+                MissingThePoint:function(msg){
+                    alert("You're missing the point. " + msg);
+                }
+            }
+            Youre.STILL_not_getting_it();
+            */
 
 		</script>
 

@@ -41,8 +41,12 @@
 			
 			#equals-button {
 				width: 72px;
-			}	
-		</style>
+			}
+
+            #clear-button {
+                width: 145px;
+            }
+        </style>
 	</head>
 	<body>
 
@@ -50,7 +54,7 @@
 		<div id="display">
 			<!-- http://twitter.github.io/bootstrap/base-css.html#forms -->
 			<!-- this class is created by bootstrap for us to use -->
-			<input id="calc-display" class="input-medium" type="text" disabled> 
+			<input id="calc-display" class="input-medium" type="text" disabled>
 		</div>
 
 		<div class="calc-row"> <!-- row 1 -->
@@ -83,6 +87,11 @@
 			<button id="equals-button" class="btn btn-success">=</button>
 			<button class="btn btn-primary item">/</button> 
 		</div>
+
+        <div class="calc-row"> <!-- row 4 -->
+            <button id="clear-button" class="btn btn-primary">Clear</button>
+
+        </div>
 		
 	</div>
 
@@ -100,6 +109,11 @@
 	
 				$('#calc-display').val(result); // replace the innerHTML with the result
 			});
+
+
+            $('#clear-button').on('click', function () {
+                $('#calc-display').val(""); // replace the innerHTML with the result
+            });
 		</script>
 
 	</body>

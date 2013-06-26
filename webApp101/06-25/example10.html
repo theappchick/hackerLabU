@@ -20,7 +20,7 @@
 				$('#main').append('<p>Hello ' + count + '! (in JS)</p>');
 			});
 
-			$('#main p').on('click', function () {
+			$('#main').on('click', 'p', function () {
 				$(this).css('background-color', '#AA0000');
 			});
 		</script>

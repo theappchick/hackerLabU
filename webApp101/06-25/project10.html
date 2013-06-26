@@ -24,6 +24,11 @@
 				border-radius: 15px;
 				box-shadow: 2px 2px 3px #888;
 			}
+
+             li {
+                display: inline;
+                vertical-align: bottom;
+            }
 		</style>
 	</head>
 	<body>
@@ -35,15 +40,53 @@
 			</ul>
 
 			<form id="todo">
-				<input type="text" name="" value="" placeholder="Enter something to do...">
+                <!--
+                -- use jquery to add to li tag here..
+                -- inside li.. add checkbox content
+                -- add single input tag.
+                -- complete the todo list
+
+                -- start out with nothing
+                -- when you enter something.
+                -- on submit event..
+                    -- get the value,
+                    -- throw inside li tag..
+                    -- append to li tag..
+                    -- then clear out something to do box
+                    -- last thing you want.. take on click event dynamic.. li tag.. strike through all text.
+
+                -- being able to bind live events is huge in web apps..
+                   - these events are primary the way we interact with elements with a web application.
+
+                -- will learn how to store this on a browser so that every time they come back, they have the same list.
+                -- start with web storage, store something on your users browser that only you will have
+                -- compare with http://meteor.com/examples/todos
+                -->
+				<input id="todoVal" type="text" name="" value="" placeholder="Enter something to do...">
 			</form>
 		</div>
 		
 		<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
 		<script type="text/javascript">
 			$('#todo').on('submit', function (event) {
-				event.preventDefault(); // prevent the form from loading the next page
-			});
+				event.preventDefault(); // prevent the form from loading the next page, by doing this.. it won't wipe out our text fields, prevents anything from happening when hitting the enter key.
+
+                var myTodo = $('#todoVal').val();
+//             wrap label around inptu and text.. That way when I click on either the input checkbox or the text, it will active the click function
+                $("#todolist").append('<label>' +
+                        '<input type="checkbox" />' +
+                        '<li> '+myTodo+'</li></label>');
+
+                $('#todoVal').val("");
+
+            });
+
+            $('#todolist').on('click', 'li', function () {
+
+                var val = $(this).text().strike();
+                $(this).html(val);
+            });
+
 		</script>
 	</body>
 </html>

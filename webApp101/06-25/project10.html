@@ -72,7 +72,7 @@
 				event.preventDefault(); // prevent the form from loading the next page, by doing this.. it won't wipe out our text fields, prevents anything from happening when hitting the enter key.
 
                 var myTodo = $('#todoVal').val();
-//             wrap label around inptu and text.. That way when I click on either the input checkbox or the text, it will active the click function
+//             wrap label around input and text.. That way when I click on either the input checkbox or the text, it will active the click function
                 $("#todolist").append('<label>' +
                         '<input type="checkbox" />' +
                         '<li> '+myTodo+'</li></label>');
@@ -83,8 +83,10 @@
 
             $('#todolist').on('click', 'li', function () {
 
-                var val = $(this).text().strike();
-                $(this).html(val);
+//                var val = $(this).text().strike();
+//                $(this).html(val);
+
+                $(this).strike();
             });
 
 		</script>

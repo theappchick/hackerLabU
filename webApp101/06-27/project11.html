@@ -96,11 +96,18 @@
                 {
                     trailer.muted=false;
                     muteElement.html("Mute");
+                    muteElement.addClass('btn-inverse');
                 }
                 else
                 {
                     trailer.muted=true;
-                    muteElement.html("UnMute");
+//                    muteElement.html("UnMute");
+//                    muteElement.removeClass('btn-inverse');
+
+                    //or use...
+                    $(this)
+                            .removeClass('btn-inverse')
+                            .html('unMute');
                 }
             });
 

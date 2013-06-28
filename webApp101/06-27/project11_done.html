@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Video</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			body {
+			    padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<video id="trailer" width="854" height="480">
+			<source src="trailer.mp4" type="video/mp4">
+		</video>
+		
+		<br>
+		<button class="btn btn-success" id="playpause">Play</button>
+		<button class="btn btn-warning" id="skip5">Skip</button>
+		<button class="btn btn-inverse" id="mute">Mute</button>
+		<br>
+		<br>
+		Time: <input type="text" id="time" disabled>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+			var trailer = $('#trailer').get(0); // select it with jQuery and get the normal DOM element
+			// the above line works exactly like the line below:
+			// var trailer = document.getElementById('trailer');
+
+			// Play/pause
+			$('#playpause').on('click', function () {
+				if (trailer.paused) {
+					// they're clicking play
+					trailer.play();
+
+                    //forgot to use this..
+					$(this)
+                            .toggleClass('btn-success btn-danger')
+						//.removeClass('btn-success')
+						//.addClass('btn-danger')
+						.html('Pause');
+				}
+				else {
+					// they've clicked paused
+					trailer.pause();
+
+					$(this)
+                            .toggleClass('btn-success btn-danger')
+					//	.removeClass('btn-danger')
+					//	.addClass('btn-success')
+						.html('Play');
+				}
+			});
+
+			// Skip 5 seconds
+			$('#skip5').on('click', function () {
+				trailer.currentTime += 5;
+			});
+
+			// Mute/unmute video
+			$('#mute').on('click', function () {
+				if (trailer.muted) {
+					trailer.muted = false;
+
+                    //forgot button-inverse
+					$(this)
+						.addClass('btn-inverse')
+						.html('Mute');
+				}
+				else {
+					trailer.muted = true;
+
+					$(this)
+						.removeClass('btn-inverse')
+						.html('Unmute');
+				}
+			});
+
+			// Event listener for non-human events...
+			// the video fires this event off a lot
+			$('#trailer').on('timeupdate', function (e) {
+				$('#time').val(trailer.currentTime);
+			});
+		</script>
+	</body>
+</html>

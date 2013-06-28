@@ -61,6 +61,9 @@
                 -- will learn how to store this on a browser so that every time they come back, they have the same list.
                 -- start with web storage, store something on your users browser that only you will have
                 -- compare with http://meteor.com/examples/todos
+
+                -- Web Storage
+                -- create a variable..
                 -->
 				<input id="todoVal" type="text" name="" value="" placeholder="Enter something to do...">
 			</form>
@@ -68,16 +71,29 @@
 		
 		<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
 		<script type="text/javascript">
+            //add an array for web storage.  append items to this to store in teh web browser.
+            var items = [];
+
+            if(typeof window.localStorage.items != 'undefined') {
+//                items = JSON.parse(window.localStorage.items);
+                for (i in items) {
+                    $("#todolist").append('<li>' + items[i] + '</li>');
+                }
+            }
 			$('#todo').on('submit', function (event) {
 				event.preventDefault(); // prevent the form from loading the next page, by doing this.. it won't wipe out our text fields, prevents anything from happening when hitting the enter key.
 
                 var myTodo = $('#todoVal').val();
+                var myliLabel =  '<label>' +
+                        '<input type="checkbox" /> ' +
+                        myTodo+'</label>';
 //             wrap label around input and text.. That way when I click on either the input checkbox or the text, it will active the click function
-                $("#todolist").append('<label>' +
-                        '<input type="checkbox" />' +
-                        '<li> '+myTodo+'</li></label>');
+                $("#todolist").append('<li>' + myliLabel + '</li>');
 
                 $('#todoVal').val("");
+
+                items.push(myTodo);
+                window.localStorage.items = JSON.stringify(items);
 
             });
 
@@ -86,7 +102,20 @@
 //                var val = $(this).text().strike();
 //                $(this).html(val);
 
-                $(this).strike();
+                $(this).css('text-decoration', 'line-through');
+
+//                $(this).strike();    //not supported in this version of jquery
+
+                //after striking it.. remove from teh array..
+
+                var index = items.indexOf($(this).parent().html());
+
+               // alert(val);
+                delete items[index];
+
+                console.log('items before: ' + items);
+                window.localStorage.items = JSON.stringify(items);
+                console.log('items after: ' + window.localStorage.items);
             });
 
 		</script>

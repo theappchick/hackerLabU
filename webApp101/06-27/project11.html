@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Video</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			body {
+			    padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<video id="trailer" width="854" height="480">
+			<source src="http://content.hackerlabuniversity.com/week4/trailer.mp4" type="video/mp4">
+		</video>
+		
+		<br>
+		<button class="btn btn-success" id="playpause">Play</button>
+		<button class="btn btn-warning" id="skip5">Skip</button>
+		<button class="btn btn-inverse" id="mute">Mute</button>
+		<br>
+		<br>
+		Time: <input type="text" id="time" disabled>
+
+		<br><br>
+		Hint: <a href="http://www.w3schools.com/tags/ref_av_dom.asp">HTML Audio and Video DOM Reference</a>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+			var trailer = $('#trailer').get(0); // select it with jQuery and get the normal DOM element
+			// the above line works exactly like the line below:
+			// var trailer = document.getElementById('trailer');
+
+
+			
+			// Create an event for play/pause.
+			// - When you hit play, the button should change to a pause button
+			// - When you hit pause, the button should change back to a play 
+			//   button
+			// - The button should toggle the css class between btn-danger
+			//   (pause button) and btn-success (play button)
+			//    Hint: http://twitter.github.io/bootstrap/base-css.html#buttons
+
+			// Create a skip button
+			// - When clicked, it should advance the video 5 seconds
+
+			// Create a mute button
+			// - Button should be a mute button when the video is not muted
+			// - Button should be an unmute button when the video is muted
+			// - The button should toggle the css class between btn-inverse
+			//   (mute button) and no btn-inverse class (unmute buttton)
+
+			// BONUS!!
+			// Make the time counter display the seconds the video is in
+			//
+			// Hint: look at the events in the document I linked you to, use
+			// jQuery to register the event $('#trailer').on('timeupdate', ...
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 Video Sample</title>
+
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+		<style>
+			body {
+			    padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<video id="trailer" width="854" height="480">
+			<source src="http://content.hackerlabuniversity.com/week4/trailer.mp4" type="video/mp4">
+		</video>
+		
+		<br>
+		<button class="btn btn-success" id="play">Play</button>
+		<button class="btn btn-danger" id="pause">Pause</button>
+		<button class="btn btn-warning" id="stop">Stop</button>
+
+		<br>
+		<br>
+		<div class="progress">
+			<div id="videoprogress" class="bar"></div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+			var trailer = $('#trailer').get(0); // select it with jQuery and get the normal DOM element
+			// the above line works exactly like the line below:
+			// var trailer = document.getElementById('trailer');
+
+			// play will begin playback
+			$('#play').on('click', function () {
+				trailer.play();
+			});
+
+			// pausing will simply pause playback to be resumed later
+			$('#pause').on('click', function () {
+				trailer.pause();
+			});
+
+			// hitting stop will stop playback and reset it to the start
+			$('#stop').on('click', function () {
+				trailer.pause(); // pause playback
+				trailer.currentTime = 0; // set the time to 0
+			});
+
+			// 'timeupdate' is a DOM event, like 'click'. jQuery lets us use
+			// any event in the 'on()' function.
+			$('#trailer').on('timeupdate', function () {
+				var percentComplete = 100 * (trailer.currentTime / trailer.duration);
+				percentComplete = Math.round(percentComplete); // CSS only likes Integers
+				$('#videoprogress').css('width', '' + percentComplete + '%');
+			});
+		</script>
+	</body>
+</html>

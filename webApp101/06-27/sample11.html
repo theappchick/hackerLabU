@@ -15,6 +15,8 @@
 		
 		<video id="trailer" width="854" height="480">
 			<source src="http://content.hackerlabuniversity.com/week4/trailer.mp4" type="video/mp4">
+            <!--you can have more than one source tag here for different codecs.-->
+            <!--code videos to webm, mp4, and any other formats to cover your basis.  -->
 		</video>
 		
 		<br>
@@ -24,12 +26,15 @@
 
 		<br>
 		<br>
+        //these classes are from bootstrap i believe..
 		<div class="progress">
 			<div id="videoprogress" class="bar"></div>
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script>
+            //represents movie trailer
+            //jquery doesn't have anything to operate directly on your movie trailer
 			var trailer = $('#trailer').get(0); // select it with jQuery and get the normal DOM element
 			// the above line works exactly like the line below:
 			// var trailer = document.getElementById('trailer');
@@ -52,6 +57,8 @@
 
 			// 'timeupdate' is a DOM event, like 'click'. jQuery lets us use
 			// any event in the 'on()' function.
+            //periodically.. tells u that the time has changed.. pretty standard
+            //video fires this event at different intervals
 			$('#trailer').on('timeupdate', function () {
 				var percentComplete = 100 * (trailer.currentTime / trailer.duration);
 				percentComplete = Math.round(percentComplete); // CSS only likes Integers

@@ -134,26 +134,8 @@
                 calculateTotals('pars', 'parTotal');
                 calculateTotals('reg', 'regTotal');
 
-                //calculate how many over/under
-                var par = $('#parTotal').val();
-                var inRegulation = $('#regTotal').val();
-                var overUnder = inRegulation-par;
+                calculateOverUnder();
 
-                $('#regTotal').val(overUnder); // set val
-
-
-                $('#regTotal').hide();
-                if(overUnder > 0)
-                {
-                    $('#overunderalert').text(overUnder + " OVER");
-                    $('#overunderalert').removeClass().addClass('alert alert-error');
-//                    alert(overUnder);
-                }
-                else if(overUnder < 0)
-                {
-                    $('#overunderalert').text(overUnder + " UNDER");
-                    $('#overunderalert').removeClass().addClass('alert alert-success');
-                }
 
 
 
@@ -190,12 +172,40 @@
 
             };
 
+            function calculateOverUnder() {
+                //calculate how many over/under
+                var par = $('#parTotal').val();
+                var inRegulation = $('#regTotal').val();
+                var overUnder = inRegulation-par;
+
+
+
+                //  $('#regTotal').hide();
+                if(overUnder > 0)
+                {
+                    $('#regTotal').val("+ "+overUnder); // set val
+                    $('#regTotal').removeClass('underpar').addClass('overpar');
+//                    alert(overUnder);
+                }
+                else if(overUnder < 0)
+                {
+                    $('#regTotal').val(overUnder); // set val
+                    $('#regTotal').removeClass('overpar').addClass('underpar');
+                }
+
+            }
+
 
             $('document').ready(function(){
 
 
                 $('.pars').change(function() {
-                    calculateTotals('pars', 'parTotal')
+                    calculateTotals('pars', 'parTotal');
+                });
+
+                $('.reg').change(function() {
+                    calculateTotals('reg', 'regTotal');
+                    calculateOverUnder();
                 });
 
                 calculateTotals('pars', 'parTotal');

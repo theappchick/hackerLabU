@@ -7,17 +7,26 @@
 body {
     color: #002a80;
     /*background-color: #EEEEEE;*/
+    background: url("http://www.wallm.com/images/t/1366x768/14332-ocean-golf-course-desktop-pc-and-mac-1366x768.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+
 #main {
-    background: url("http://www.wallm.com/images/t/1366x768/14332-ocean-golf-course-desktop-pc-and-mac-1366x768.jpg");
-    /*background-color: #356635;*/
-    padding: 10px;
+    /*background-color: #d9edf7;*/
+    /*background-color:rgba(0,0,0,.1);*/
+    /*background: url("http://www.wallm.com/images/t/1366x768/14332-ocean-golf-course-desktop-pc-and-mac-1366x768.jpg") no-repeat center center fixed;*/
+
+    /*padding: 10px;*/
+
     /*width: 850px;*/
-    margin: 10px auto;
-    border-radius: 15px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 3px #888;
+    /*margin: 10px auto;*/
+    /*border-radius: 15px;*/
+    /*border-radius: 15px;*/
+    /*box-shadow: 2px 2px 3px #888;*/
 }
 
 .input-small {
@@ -47,4 +56,25 @@ body {
 
 input [disabled] {
     background-color: red;
+}
+
+#scoringZone {
+    background-color: rgba(255, 255, 255, .4);
+    margin: 10px auto;
+    border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #888;
+}
+
+input[type="text"].overpar{
+
+    border-width: 4px;
+    border-color: #b94a48;
+}
+
+input[type="text"].underpar{
+
+    border-width: 4px;
+    border-color: #468847;
+
 }

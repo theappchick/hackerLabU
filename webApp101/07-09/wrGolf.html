@@ -1,262 +1,278 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title> Conversions</title>
+<head>
+    <meta charset="utf-8">
+    <title> Conversions</title>
 
-		<!--
-			We're using a CDN (content delivery network) to serve bootstrap.
-			Remember, we can actually host this locally as well.
-		-->
-		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+    <!--
+        We're using a CDN (content delivery network) to serve bootstrap.
+        Remember, we can actually host this locally as well.
+    -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
-	</head>
-	<body>
+</head>
+<body>
 
-		<div id="main">
-			<h1>Tee ~ 2 ~ Green</h1>
+<div id="main">
+    <h1>Tee ~ 2 ~ Green</h1>
 
-			<!--
-				<form>s are the traditional way to encapsulate your input tags.
-				Each convertion has its own <form> tag
-			-->
+    <!--
+        <form>s are the traditional way to encapsulate your input tags.
+        Each convertion has its own <form> tag
+    -->
 
-			<form class="form-inline" id="scoringZone"> <!-- make sure there is a different ID for each conversion -->
-                <div class="container-fluid">
+    <form class="form-inline" id="scoringZone"> <!-- make sure there is a different ID for each conversion -->
+        <div class="container-fluid">
 
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <label >HOLE#</label>
-                        </div>
-                        <div class="span7">
-                            <input class="input-small holes" type="text" placeholder="1" disabled>
-                            <input class="input-small holes" type="text" placeholder="2" disabled>
-                            <input class="input-small holes" type="text" placeholder="3" disabled>
-                            <input class="input-small holes" type="text" placeholder="4" disabled>
-                            <input class="input-small holes" type="text" placeholder="5" disabled>
-                            <input class="input-small holes" type="text" placeholder="6" disabled>
-                            <input class="input-small holes" type="text" placeholder="7" disabled>
-                            <input class="input-small holes" type="text" placeholder="8" disabled>
-                            <input class="input-small holes" type="text" placeholder="9" disabled>
-                        </div>
-                        <div class="span2">
-                            </div>
-                    </div>
-
-
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <label >PAR</label>
-                        </div>
-                        <div class="span7">
-                            <input class="input-small pars" type="text" value="4" placeholder="1">
-                            <input class="input-small pars" type="text" value="5" placeholder="2">
-                            <input class="input-small pars" type="text" value="4" placeholder="3">
-                            <input class="input-small pars" type="text" value="3" placeholder="4">
-                            <input class="input-small pars" type="text" value="4" placeholder="5">
-                            <input class="input-small pars" type="text" value="4" placeholder="6">
-                            <input class="input-small pars" type="text" value="5" placeholder="7">
-                            <input class="input-small pars" type="text" value="3" placeholder="8">
-                            <input class="input-small pars" type="text" value="4" placeholder="9">
-                       </div>
-                        <div class="span2">
-                            <input id="parTotal" class="input-totals" type="text" placeholder="PAR" disabled>
-                            <button class="btn-large btn-primary">SUBMIT</button>
-                        </div>
-                    </div>
-
-
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <label >Entering Scoring Zone <br>100 Y in Regulation</label>
-                        </div>
-                        <div class="span7">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                            <input class="input-small reg" type="text" placeholder="">
-                        </div>
-                        <div class="span2">
-                            <input id="regTotal" class="input-totals" type="text" placeholder="In Regulation" disabled>
-                            <div class="input-totals" id="overunderalert">
-
-                            </div>
-
-                        </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <label>HOLE#</label>
                 </div>
+                <div class="span7">
+                    <input class="input-small holes" type="text" placeholder="1" disabled>
+                    <input class="input-small holes" type="text" placeholder="2" disabled>
+                    <input class="input-small holes" type="text" placeholder="3" disabled>
+                    <input class="input-small holes" type="text" placeholder="4" disabled>
+                    <input class="input-small holes" type="text" placeholder="5" disabled>
+                    <input class="input-small holes" type="text" placeholder="6" disabled>
+                    <input class="input-small holes" type="text" placeholder="7" disabled>
+                    <input class="input-small holes" type="text" placeholder="8" disabled>
+                    <input class="input-small holes" type="text" placeholder="9" disabled>
+                </div>
+                <div class="span2">
+                </div>
+            </div>
 
 
-             </div>
-
-			</form>
-
-			<!--<h3>Feet to Miles</h3>-->
-			<!--<form class="form-inline" id="feet-mile"> &lt;!&ndash; make sure there is a different ID for each conversion &ndash;&gt;-->
-				<!--<input class="input-small from" type="text" placeholder="feet">-->
-				<!--<button class="btn">-&ndash;&gt;</button>-->
-				<!--<input class="input-small to" type="text" placeholder="mile" disabled>-->
-			<!--</form>-->
-
-			<!--<h3>Fahrenheit to Celsius</h3>-->
-			<!--<form class="form-inline" id="fahr-celsius"> &lt;!&ndash; make sure there is a different ID for each conversion &ndash;&gt;-->
-				<!--<input class="input-small from" type="text" placeholder="fahrenheit">-->
-				<!--<button class="btn">-&ndash;&gt;</button>-->
-				<!--<input class="input-small to" type="text" placeholder="celsius" disabled>-->
-			<!--</form>-->
-
-
-			
-		</div>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			/*
-				When you submit a form (click a button in it), it fire an event
-				called 'submit'. usually this goes to a secondary page, but we
-				don't want that to happen. We let JavaScript capture the submit
-				event and 
-			*/
-
-			$('#scoringZone').on('submit', function (e) { // this parameter called 'e' is key... it's the event data.
-				e.preventDefault(); // ****this prevents the page from being reloaded/refreshed*****  (won't see the output if you don't prevent this)
-				
-				// add up all scores for the front 9
-				// select the 'from' class from the form tag, aka "this"
+            <div class="row-fluid">
+                <div class="span3">
+                    <label>PAR</label>
+                </div>
+                <div class="span7">
+                    <input class="input-small pars" type="text" value="4" placeholder="1">
+                    <input class="input-small pars" type="text" value="5" placeholder="2">
+                    <input class="input-small pars" type="text" value="4" placeholder="3">
+                    <input class="input-small pars" type="text" value="3" placeholder="4">
+                    <input class="input-small pars" type="text" value="4" placeholder="5">
+                    <input class="input-small pars" type="text" value="4" placeholder="6">
+                    <input class="input-small pars" type="text" value="5" placeholder="7">
+                    <input class="input-small pars" type="text" value="3" placeholder="8">
+                    <input class="input-small pars" type="text" value="4" placeholder="9">
+                </div>
+                <div class="span2">
+                    <input id="parTotal" class="input-totals" type="text" placeholder="PAR" disabled>
+                    <!--<button class="btn-large btn-primary">SUBMIT</button>-->
+                </div>
+            </div>
 
 
-                calculateTotals('pars', 'parTotal');
-                calculateTotals('reg', 'regTotal');
+            <div class="row-fluid">
+                <div class="span3">
+                    <label>Entering 100 Y in Regulation</label>
+                </div>
+                <div class="span7">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                    <input class="input-small reg" type="text" placeholder="">
+                </div>
+                <div class="span2">
+                    <input id="regTotal" class="input-totals" type="text" placeholder="In Regulation" disabled>
 
-                calculateOverUnder();
+                    <div class="input-totals" id="overunderalert">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span3">
+                    <label>Down in 3</label>
+                </div>
+                <div class="span7">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                    <input class="input-small downin3" type="text" placeholder="">
+                </div>
+                <div class="span2">
+                    <input id="downIn3Total" class="input-totals" type="text" placeholder="Down in 3" disabled>
+                </div>
+            </div>
 
 
+        </div>
 
+    </form>
+
+    <!--<h3>Feet to Miles</h3>-->
+    <!--<form class="form-inline" id="feet-mile"> &lt;!&ndash; make sure there is a different ID for each conversion &ndash;&gt;
+    -->
+    <!--<input class="input-small from" type="text" placeholder="feet">-->
+    <!--<button class="btn">-&ndash;&gt;</button>-->
+    <!--<input class="input-small to" type="text" placeholder="mile" disabled>-->
+    <!--</form>-->
+
+    <!--<h3>Fahrenheit to Celsius</h3>-->
+    <!--<form class="form-inline" id="fahr-celsius"> &lt;!&ndash; make sure there is a different ID for each conversion &ndash;&gt;
+    -->
+    <!--<input class="input-small from" type="text" placeholder="fahrenheit">-->
+    <!--<button class="btn">-&ndash;&gt;</button>-->
+    <!--<input class="input-small to" type="text" placeholder="celsius" disabled>-->
+    <!--</form>-->
+
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    /*
+     When you submit a form (click a button in it), it fire an event
+     called 'submit'. usually this goes to a secondary page, but we
+     don't want that to happen. We let JavaScript capture the submit
+     event and
+     */
+
+    $('#scoringZone').on('submit', function (e) { // this parameter called 'e' is key... it's the event data.
+        e.preventDefault(); // ****this prevents the page from being reloaded/refreshed*****  (won't see the output if you don't prevent this)
+
+        // add up all scores for the front 9
+        // select the 'from' class from the form tag, aka "this"
+
+
+        calculateTotals('pars', 'parTotal');
+        calculateTotals('reg', 'regTotal');
+        calculateTotals('downin3', 'downIn3Total');
+
+        calculateOverUnder();
 
 
 //				var inches = $(this).children('.from').val();
 //				inches = parseInt(inches); // We use parseInt() to take the string value and turn it into a number
 //				var feet = inches / 12;
 //				$(this).children('.to').val(feet); // set val
-			});
+    });
 
 
-            function calculateTotals(columnsToAddClass, totalFieldId)
-            {
+    function calculateTotals(columnsToAddClass, totalFieldId) {
 
-                var totals = 0;
-                //calculate the scoring zone total in regulation
-                $('.'+columnsToAddClass).each(
-                        function(){
-                            //access to form element via $(this)
-                            var childVal = $(this).val();
-                            if(childVal > "")
-                            {
-                                childVal = parseInt(childVal);
-                                totals =  totals + childVal;
-                            }
+        var totals = 0;
+        //calculate the scoring zone total in regulation
+        $('.' + columnsToAddClass).each(
+                function () {
+                    //access to form element via $(this)
+                    var childVal = $(this).val();
+                    if (childVal > "") {
+                        childVal = parseInt(childVal);
+                        totals = totals + childVal;
+                    }
 
 
-                        }
-                );
+                }
+        );
 
 //                alert(totals);
-                $('#'+totalFieldId).val(totals); // set val
+        $('#' + totalFieldId).val(totals); // set val
 
 
-            };
+    }
+    ;
 
-            function calculateOverUnder() {
-                //calculate how many over/under
-                var par = $('#parTotal').val();
-                var inRegulation = $('#regTotal').val();
-                var overUnder = inRegulation-par;
+    function calculateOverUnder() {
+        //calculate how many over/under
+        var par = $('#parTotal').val();
+        var inRegulation = $('#regTotal').val();
+        var overUnder = inRegulation - par;
 
 
-
-                //  $('#regTotal').hide();
-                if(overUnder > 0)
-                {
-                    $('#regTotal').val("+ "+overUnder); // set val
-                    $('#regTotal').removeClass('underpar').addClass('overpar');
+        //  $('#regTotal').hide();
+        if (overUnder > 0) {
+            $('#regTotal').val("+ " + overUnder); // set val
+            $('#regTotal').removeClass('underpar').addClass('overpar');
 //                    alert(overUnder);
-                }
-                else if(overUnder < 0)
-                {
-                    $('#regTotal').val(overUnder); // set val
-                    $('#regTotal').removeClass('overpar').addClass('underpar');
-                }
+        }
+        else if (overUnder < 0) {
+            $('#regTotal').val(overUnder); // set val
+            $('#regTotal').removeClass('overpar').addClass('underpar');
+        }
 
-            }
-
-
-            $('document').ready(function(){
+    }
 
 
-                $('.pars').change(function() {
-                    calculateTotals('pars', 'parTotal');
-                });
-
-                $('.reg').change(function() {
-                    calculateTotals('reg', 'regTotal');
-                    calculateOverUnder();
-                });
-
-                calculateTotals('pars', 'parTotal');
-
-            });
-
-		
-//
-//			// Feet -> Miles
-//			$('#feet-mile').on('submit', function (e) {
-//				e.preventDefault();
-//				var feet = $(this).children('.from').val();
-//				feet = parseInt(feet);
-//				var miles = feet  / 5280; // One mile is equal to 5,280 feet, for some unknown reason.
-//				$(this).children('.to').val(miles);
-//			});
-//
-//			//Fahrenheit to Celsius
-//			$('#fahr-celsius').on('submit', function (e) {
-//				e.preventDefault();
-//				var fahrenheit = $(this).children('.from').val();
-//				fahrenheit = parseInt(fahrenheit);
-//				var celsius = (fahrenheit - 32) * (5/9) ; //Celsius is Fahrenheit minus 32 and then multiplied by (5/9).. somehow.
-//				$(this).children('.to').val(celsius);
-//			});
-
-			
-			/*
-				Now do it yourself: Make a conversion form using the submit event. 
-				Some ideas of conversions: feet -> yard, cups -> ounces, kilograms -> pounds.
-
-                http://www.snowcrest.net/donnelly/piglatin.html
-				Expertway odemay (do at home!): Create a pig latin converter. This will involve some string manipulation.
-				Use google (or better, DuckDuckGo) to find resources/algorithms/code to help
-             http://www.webdeveloper.com/forum/showthread.php?253432-Yet-another-code-for-Pig-Latin-converter/page2
-			*/
+    $('document').ready(function () {
 
 
-             /*    LOL
-            Youre = {
-                STILL_not_getting_it:function(){
-                    alert("YOU, the original poster / thread starter NEED to POST the code and NOT a LINK.");
-                },
-                MissingThePoint:function(msg){
-                    alert("You're missing the point. " + msg);
-                }
-            }
-            Youre.STILL_not_getting_it();
-            */
+        $('.pars').change(function () {
+            calculateTotals('pars', 'parTotal');
+        });
 
-		</script>
+        $('.reg').change(function () {
+            calculateTotals('reg', 'regTotal');
+            calculateOverUnder();
+        });
 
-	</body>
+        calculateTotals('pars', 'parTotal');
+
+    });
+
+
+    //
+    //			// Feet -> Miles
+    //			$('#feet-mile').on('submit', function (e) {
+    //				e.preventDefault();
+    //				var feet = $(this).children('.from').val();
+    //				feet = parseInt(feet);
+    //				var miles = feet  / 5280; // One mile is equal to 5,280 feet, for some unknown reason.
+    //				$(this).children('.to').val(miles);
+    //			});
+    //
+    //			//Fahrenheit to Celsius
+    //			$('#fahr-celsius').on('submit', function (e) {
+    //				e.preventDefault();
+    //				var fahrenheit = $(this).children('.from').val();
+    //				fahrenheit = parseInt(fahrenheit);
+    //				var celsius = (fahrenheit - 32) * (5/9) ; //Celsius is Fahrenheit minus 32 and then multiplied by (5/9).. somehow.
+    //				$(this).children('.to').val(celsius);
+    //			});
+
+
+    /*
+     Now do it yourself: Make a conversion form using the submit event.
+     Some ideas of conversions: feet -> yard, cups -> ounces, kilograms -> pounds.
+
+     http://www.snowcrest.net/donnelly/piglatin.html
+     Expertway odemay (do at home!): Create a pig latin converter. This will involve some string manipulation.
+     Use google (or better, DuckDuckGo) to find resources/algorithms/code to help
+     http://www.webdeveloper.com/forum/showthread.php?253432-Yet-another-code-for-Pig-Latin-converter/page2
+     */
+
+
+    /*    LOL
+     Youre = {
+     STILL_not_getting_it:function(){
+     alert("YOU, the original poster / thread starter NEED to POST the code and NOT a LINK.");
+     },
+     MissingThePoint:function(msg){
+     alert("You're missing the point. " + msg);
+     }
+     }
+     Youre.STILL_not_getting_it();
+     */
+
+</script>
+
+</body>
 </html>

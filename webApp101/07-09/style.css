@@ -66,15 +66,15 @@ input [disabled] {
     box-shadow: 2px 2px 3px #888;
 }
 
-input[type="text"].overpar{
+input[type="text"].underpar{
 
     border-width: 4px;
     border-color: #b94a48;
 }
 
-input[type="text"].underpar{
+input[type="text"].overpar{
 
-    border-width: 4px;
-    border-color: #468847;
+    border-width: 3px;
+    border-color: #000000;
 
 }

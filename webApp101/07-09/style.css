@@ -1,0 +1,50 @@
+/* this is special... it selects all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #002a80;
+    /*background-color: #EEEEEE;*/
+}
+
+#main {
+    background: url("http://www.wallm.com/images/t/1366x768/14332-ocean-golf-course-desktop-pc-and-mac-1366x768.jpg");
+    /*background-color: #356635;*/
+    padding: 10px;
+    /*width: 850px;*/
+    margin: 10px auto;
+    border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #888;
+}
+
+.input-small {
+    width: 40px;
+}
+
+
+.input-totals {
+    width: 95px;
+}
+
+.row-fluid {
+    margin-top:15px;
+}
+
+
+.overpar {
+    background-color: #d59392;
+    color: #d59392;
+    border:1px solid red;    !important
+}
+
+
+.underpar {
+    background-color: #468847;     !important
+}
+
+input [disabled] {
+    background-color: red;
+}

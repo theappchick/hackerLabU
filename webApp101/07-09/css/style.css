@@ -5,9 +5,9 @@
 }
 
 body {
-    color: #002a80;
+    color: #d9edf7;
     /*background-color: #EEEEEE;*/
-    background: url("http://www.wallm.com/images/t/1366x768/14332-ocean-golf-course-desktop-pc-and-mac-1366x768.jpg") no-repeat center center fixed;
+    background: url("../images/background-image-golf-course-ocean2.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -59,7 +59,7 @@ input [disabled] {
 }
 
 #scoringZone {
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(0, 0, 0, .4);
     margin: 10px auto;
     border-radius: 15px;
     border-radius: 15px;

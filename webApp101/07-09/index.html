@@ -38,25 +38,31 @@
     <form class="form-inline" id="scoringZone"> <!-- make sure there is a different ID for each conversion -->
         <div class="container-fluid">
 
-            <div id="scorecard-row-placeholder" class="row-fluid">
+            <div id="scorecard-row-placeholder">
                 <script id="scorecard-row-template" type="text/x-handlebars-template">
-                    <div class="span3">
-                        <label>{{title}}</label>
-                    </div>
-                    <div class="span7">
-                        <input class="input-small holes" type="text" placeholder="1" disabled>
-                        <input class="input-small holes" type="text" placeholder="2" disabled>
-                        <input class="input-small holes" type="text" placeholder="3" disabled>
-                        <input class="input-small holes" type="text" placeholder="4" disabled>
-                        <input class="input-small holes" type="text" placeholder="5" disabled>
-                        <input class="input-small holes" type="text" placeholder="6" disabled>
-                        <input class="input-small holes" type="text" placeholder="7" disabled>
-                        <input class="input-small holes" type="text" placeholder="8" disabled>
-                        <input class="input-small holes" type="text" placeholder="9" disabled>
-                    </div>
-                    <div class="span2">
+                    {{#statRows}}
+                    <div class="row-fluid">
 
+
+                        <div class="span3">
+                            <label>{{rowTitle}}</label>
+                        </div>
+                        <div class="span7">
+                            <input class="input-small holes" type="text" placeholder="1" disabled>
+                            <input class="input-small holes" type="text" placeholder="2" disabled>
+                            <input class="input-small holes" type="text" placeholder="3" disabled>
+                            <input class="input-small holes" type="text" placeholder="4" disabled>
+                            <input class="input-small holes" type="text" placeholder="5" disabled>
+                            <input class="input-small holes" type="text" placeholder="6" disabled>
+                            <input class="input-small holes" type="text" placeholder="7" disabled>
+                            <input class="input-small holes" type="text" placeholder="8" disabled>
+                            <input class="input-small holes" type="text" placeholder="9" disabled>
+                        </div>
+                        <div class="span2">
+
+                        </div>
                     </div>
+                    {{/statRows}}
                 </script>
             </div>
 
@@ -85,7 +91,7 @@
 
             <div class="row-fluid">
                 <div class="span3">
-                    <label>Entering 100 Y in Regulation</label>
+                    <label>Score</label>
                 </div>
                 <div class="span7">
                     <input class="input-small reg" type="text" placeholder="">
@@ -99,7 +105,7 @@
                     <input class="input-small reg" type="text" placeholder="">
                 </div>
                 <div class="span2">
-                    <input id="regTotal" class="input-totals" type="text" placeholder="In Regulation" disabled>
+                    <input id="regTotal" class="input-totals" type="text" placeholder="Total Score" disabled>
 
                     <div class="input-totals" id="overunderalert">
 
@@ -108,37 +114,37 @@
                 </div>
             </div>
 
-            <div class="row-fluid">
-                <div class="span3">
-                    <label>Down in 3</label>
-                </div>
-                <div class="span7">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                    <input class="input-small downin3" type="text" placeholder="">
-                </div>
-                <div class="span2">
-                    <input id="downIn3Total" class="input-totals" type="text" placeholder="Down in 3" disabled>
-                </div>
-            </div>
+            <!--<div class="row-fluid">-->
+                <!--<div class="span3">-->
+                    <!--<label>Down in 3</label>-->
+                <!--</div>-->
+                <!--<div class="span7">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                    <!--<input class="input-small downin3" type="text" placeholder="">-->
+                <!--</div>-->
+                <!--<div class="span2">-->
+                    <!--<input id="downIn3Total" class="input-totals" type="text" placeholder="Down in 3" disabled>-->
+                <!--</div>-->
+            <!--</div>-->
 
-        <div class='row-fluid'>
-            <div class='span12'>
-                <p class='pull-right'>
-                    <a title="Powered By The App Chicks.com" href="http://theappchicks.com/" target="_blank"><img
-                            src="./images/theappchicksmobilemarketing-footer.png" width="175"/></a>
-                </p>
+            <div class='row-fluid'>
+                <div class='span12'>
+                    <p class='pull-right'>
+                        <a title="Powered By The App Chicks.com" href="http://theappchicks.com/" target="_blank"><img
+                                src="./images/theappchicksmobilemarketing-footer.png" width="175"/></a>
+                    </p>
+                </div>
+
             </div>
 
         </div>
-
-     </div>
     </form>
 
     <!--<h3>Feet to Miles</h3>-->
@@ -250,8 +256,32 @@
         //1. compile once
         scorecardTemplate = Handlebars.compile($("#scorecard-row-template").html());
 
+        //<input class="input-small holes" type="text" placeholder="1" disabled>
         //2. create context and set html when needed
-        var context = {title: "HOLE#", body: "These are the hole numbers"}
+        var context = {"statRows": [
+            {
+                "rowTitle": "HOLE#",
+                "contents": {
+                    "type": "text",
+                    "class" : "input-small holes",
+                    "disabled": "disabled",
+                    "placeholders": [ "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+                    "values": [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+                }
+            }
+//            {
+//                "rowTitle": "PAR",
+//                "contents": {
+//                    "type": "text",
+//                    "class" : "input-small pars",
+//                    "placeholders": [ "4", "5", "4", "3", "4", "4", "5", "4", "4"],
+//                    "values": [ "4", "5", "4", "3", "4", "4", "5", "4", "4"]
+//                }
+//            }
+        ]
+        };
+
+
         var html = scorecardTemplate(context);
 
         $('#scorecard-row-placeholder').html(html);
@@ -259,6 +289,8 @@
 
         $('.pars').change(function () {
             calculateTotals('pars', 'parTotal');
+            calculateTotals('reg', 'regTotal');
+            calculateOverUnder();
         });
 
         $('.reg').change(function () {

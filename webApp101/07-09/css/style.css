@@ -68,13 +68,13 @@ input [disabled] {
 
 input[type="text"].underpar{
 
-    border-width: 4px;
+    border-width: 5px;
     border-color: #b94a48;
 }
 
 input[type="text"].overpar{
 
-    border-width: 3px;
+    border-width: 5px;
     border-color: #000000;
 
 }

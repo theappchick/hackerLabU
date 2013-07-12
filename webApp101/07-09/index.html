@@ -44,19 +44,13 @@
                     <div class="row-fluid">
 
 
-                        <div class="span3">
+                        <div class="span1">
                             <label>{{rowTitle}}</label>
                         </div>
-                        <div class="span7">
-                            <input class="input-small holes" type="text" placeholder="1" disabled>
-                            <input class="input-small holes" type="text" placeholder="2" disabled>
-                            <input class="input-small holes" type="text" placeholder="3" disabled>
-                            <input class="input-small holes" type="text" placeholder="4" disabled>
-                            <input class="input-small holes" type="text" placeholder="5" disabled>
-                            <input class="input-small holes" type="text" placeholder="6" disabled>
-                            <input class="input-small holes" type="text" placeholder="7" disabled>
-                            <input class="input-small holes" type="text" placeholder="8" disabled>
-                            <input class="input-small holes" type="text" placeholder="9" disabled>
+                        <div class="span9">
+                            {{#each contents.values}}
+                                <input class="{{../contents.class}}" type="{{../contents.type}}" placeholder={{this}} value={{this}} {{../contents.disabled}}>
+                            {{/each}}
                         </div>
                         <div class="span2">
 
@@ -68,10 +62,10 @@
 
 
             <div class="row-fluid">
-                <div class="span3">
+                <div class="span1">
                     <label>PAR</label>
                 </div>
-                <div class="span7">
+                <div class="span9">
                     <input class="input-small pars" type="text" value="4" placeholder="1">
                     <input class="input-small pars" type="text" value="5" placeholder="2">
                     <input class="input-small pars" type="text" value="4" placeholder="3">
@@ -90,10 +84,10 @@
 
 
             <div class="row-fluid">
-                <div class="span3">
+                <div class="span1">
                     <label>Score</label>
                 </div>
-                <div class="span7">
+                <div class="span9">
                     <input class="input-small reg" type="text" placeholder="">
                     <input class="input-small reg" type="text" placeholder="">
                     <input class="input-small reg" type="text" placeholder="">

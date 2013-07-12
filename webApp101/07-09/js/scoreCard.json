@@ -5,7 +5,6 @@
             "type": "text",
             "class": "input-small holes",
             "disabled": "disabled",
-            "placeholders": [ "1", "2", "3", "4", "5", "6", "7", "8", "9"],
             "values": [ "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         }
     },
@@ -14,8 +13,10 @@
         "contents": {
             "type": "text",
             "class": "input-small pars",
-            "placeholders": [ "4", "5", "4", "3", "4", "4", "5", "4", "4"],
             "values": [ "4", "5", "4", "3", "4", "4", "5", "4", "4"]
+        },
+        "totalField": {
+
         }
     }
 ]

@@ -2,14 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe696307-9b50-4ecb-b655-804f6255cf29" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webApp101/06-06/project4.html" afterPath="$PROJECT_DIR$/webApp101/06-06/project4.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webApp101/.idea/workspace.xml" afterPath="$PROJECT_DIR$/webApp101/.idea/workspace.xml" />
     </list>
     <ignored path="hackerLabU.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371003186466" ignored="false" />
+    <file path="/Dummy.txt" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1374685508176" ignored="false" />
     <file path="/project1.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371004406848" ignored="false" />
-    <file path="/project4.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371005292697" ignored="false" />
+    <file path="/project4.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371005776019" ignored="false" />
+    <file path="/project8.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371604973281" ignored="false" />
+    <file path="/project8cj.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371609794087" ignored="false" />
+    <file path="/sample9.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371777591938" ignored="false" />
+    <file path="/project9.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1371779801143" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xml.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/documentation.xsl" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/documentation.xml" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/xpath/lib/xpath.jar!/org/intellij/lang/xpath/xslt/resources/xslt-schema.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-transitional.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/xhtml1-strict.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/catalog.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/html5/xhtml5.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/relaxng.rng" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/lib/webstorm.jar!/standardSchemas/XMLSchema-instance.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372017692381" ignored="false" />
+    <file path="/project10.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372215355070" ignored="false" />
+    <file path="/sample11.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372382047118" ignored="false" />
+    <file path="/project11.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372386368634" ignored="false" />
+    <file path="/project11_done.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372386112437" ignored="false" />
+    <file path="/canvas.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1372818483583" ignored="false" />
+    <file path="/wrGolf.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373470276751" ignored="false" />
+    <file path="/style.css" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373592513230" ignored="false" />
+    <file path="/index.html" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373594519973" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373512675560" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspdirectives.xsd" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373512675560" ignored="false" />
+    <file path="$USER_HOME$/apps/theShop/RSVP/Google-Map/WebContent/index.jsp" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373556940944" ignored="false" />
+    <file path="/scoreCard.json" changelist="fe696307-9b50-4ecb-b655-804f6255cf29" time="1373594650895" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,19 +55,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="project3.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webApp101/06-06/project3.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webApp101/07-09/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="64" selection-start="332" selection-end="332" vertical-scroll-proportion="-10.0">
+            <state line="51" column="55" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project4.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webApp101/06-06/project4.html">
+      <file leaf-file-name="scoreCard.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webApp101/07-09/js/scoreCard.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="22" selection-start="575" selection-end="575" vertical-scroll-proportion="0.59010154">
+            <state line="18" column="12" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webApp101/07-09/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="43" selection-start="794" selection-end="794" vertical-scroll-proportion="0.01984127">
               <folding />
             </state>
           </provider>
@@ -65,18 +100,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/webApp101/project1.html" />
-        <option value="$PROJECT_DIR$/webApp101/06-04/project1.html" />
-        <option value="$PROJECT_DIR$/webApp101/06-06/project3.html" />
-        <option value="$PROJECT_DIR$/webApp101/06-06/project4.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-06/project5.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-18/project8.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-18/project8cj.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-20/sample9.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-20/project9.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-25/example10.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-25/project10.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-27/sample11.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-27/project11_done.html" />
+        <option value="$PROJECT_DIR$/webApp101/06-27/project11.html" />
+        <option value="$PROJECT_DIR$/webApp101/07-02/canvas.html" />
+        <option value="$PROJECT_DIR$/webApp101/07-09/style.css" />
+        <option value="$PROJECT_DIR$/webApp101/07-09/wrGolf.html" />
+        <option value="$PROJECT_DIR$/webApp101/07-09/css/style.css" />
+        <option value="$PROJECT_DIR$/webApp101/07-09/js/scoreCard.json" />
+        <option value="$PROJECT_DIR$/webApp101/07-09/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="749" />
-    <option name="y" value="22" />
-    <option name="width" value="920" />
-    <option name="height" value="958" />
+    <option name="x" value="463" />
+    <option name="y" value="118" />
+    <option name="width" value="1059" />
+    <option name="height" value="915" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -104,7 +151,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,7 +187,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cheat_sheets" />
+              <option name="myItemId" value="07-09" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -159,7 +205,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="06-11" />
+              <option name="myItemId" value="07-09" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -177,7 +227,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="06-06" />
+              <option name="myItemId" value="07-09" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,37 +249,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="06-04" />
+              <option name="myItemId" value="07-02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackerLabU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackerLabU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webApp101" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="06-27" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackerLabU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hackerLabU" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="52" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="59" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="63" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="71" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="57" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="112" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="65" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="623" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="623" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="61" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="58" />
+    <property name="last_opened_file_path" value="$USER_HOME$/apps/theShop/RSVP/Google-Map" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="79" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="791" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="664" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="116" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="112" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webApp101/07-09" />
+      <recent name="$PROJECT_DIR$/webApp101/06-18" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webApp101/07-09/js" />
+      <recent name="$PROJECT_DIR$/webApp101/06-06" />
+      <recent name="$PROJECT_DIR$/webApp101" />
+      <recent name="$PROJECT_DIR$/webApp101/06-04" />
+      <recent name="$PROJECT_DIR$/webApp101/06-11" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -297,18 +394,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="749" y="22" width="920" height="958" extended-state="0" />
-    <editor active="true" />
+    <frame x="463" y="118" width="1059" height="915" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27982163" sideWeight="0.67142856" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24928367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.85144925" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17765044" sideWeight="0.8040621" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.9941038" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19593787" sideWeight="0.9941038" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -346,12 +443,12 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
@@ -382,33 +479,101 @@
     <MESSAGE value="Adding background color to navbar list items" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/webApp101/06-18/project8cj.html</url>
+          <line>147</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webApp101/06-11/project6.html">
+    <entry file="file://$PROJECT_DIR$/webApp101/06-18/project8b.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="306" selection-end="306" vertical-scroll-proportion="0.30967742">
+        <state line="34" column="42" selection-start="574" selection-end="574" vertical-scroll-proportion="0.6398996" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-18/project8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="88" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.52506596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-18/project8b_solution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.7478043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-20/sample9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="46" selection-start="2870" selection-end="2870" vertical-scroll-proportion="0.5844327" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-18/project8cj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="66" selection-start="4549" selection-end="4594" vertical-scroll-proportion="-10.208333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webApp101/06-04/project1.html">
+    <entry file="file://$PROJECT_DIR$/webApp101/06-25/project10_done.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="421" selection-end="421" vertical-scroll-proportion="0.3426396">
+        <state line="52" column="68" selection-start="1152" selection-end="1199" vertical-scroll-proportion="-23.125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-25/example10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="17" selection-start="452" selection-end="548" vertical-scroll-proportion="0.5555556" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-27/project11_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="26" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-27/sample11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="52" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.14820592" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/07-02/canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="45" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.84317344" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-27/project11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="24" selection-start="3915" selection-end="3915" vertical-scroll-proportion="0.4188192" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-25/project10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="20" selection-start="3145" selection-end="3145" vertical-scroll-proportion="0.027675277" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/06-20/project9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="27" selection-start="450" selection-end="450" vertical-scroll-proportion="-11.25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webApp101/07-09/js/scoreCard.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webApp101/06-06/project3.html">
+    <entry file="file://$PROJECT_DIR$/webApp101/07-09/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="64" selection-start="332" selection-end="332" vertical-scroll-proportion="-10.0">
+        <state line="51" column="55" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webApp101/06-06/project4.html">
+    <entry file="file://$PROJECT_DIR$/webApp101/07-09/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="575" selection-end="575" vertical-scroll-proportion="0.59010154">
+        <state line="30" column="43" selection-start="794" selection-end="794" vertical-scroll-proportion="0.01984127">
           <folding />
         </state>
       </provider>

@@ -8,7 +8,6 @@
     <title>My Books</title>
 
 
-
     <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 
     <!-- Extra Codiqa features -->
@@ -31,13 +30,13 @@
         //https://github.com/timanglade/training/blob/gh-pages/02-read.html
         //https://raw.github.com/timanglade/training/gh-pages/02-read.html
         var apigee = new Usergrid.Client({
-            orgName:'theappchick',
-            appName:'sandbox'
+            orgName: 'theappchick',
+            appName: 'sandbox'
         });
 
 
         // A Collection object that will be used to hold the list of books locally
-        var my_books = new Usergrid.Collection( { "client":apigee, "type":"books" } );
+        var my_books = new Usergrid.Collection({ "client": apigee, "type": "books" });
 
         //http://api.usergrid.com/theappchick/sandbox/books
         // Actual network call
@@ -47,11 +46,11 @@
                 function () {
                     $('#books-list').empty();
 
-                    while ( my_books.hasNextEntity() ) {
+                    while (my_books.hasNextEntity()) {
                         var current_book = my_books.getNextEntity();
 
                         // Output the book on the page
-                        $('#books-list').append('<li><h3>'+current_book.get('Title')+'</h3><p>'+current_book.get('AUTHOR')+'</p></li>');
+                        $('#books-list').append('<li><h3>' + current_book.get('Title') + '</h3><p>' + current_book.get('AUTHOR') + '</p></li>');
                     }
 
                     // Re-apply jQuery Mobile styles
@@ -59,7 +58,9 @@
                 },
 
                 // Failure Callback
-                function () { alert("read failed"); }
+                function () {
+                    alert("read failed");
+                }
         );
 
 
@@ -67,31 +68,31 @@
 
 </head>
 <body>
-<div data-role="page" data-control-title="Home" id="page1">
+<div data-role="page" data-control-title="Home" id="page-books-list">
     <div data-theme="b" data-role="header">
-        <a data-role="button" data-theme="b" href="#addBook" data-icon="plus"
-           data-iconpos="right" class="ui-btn-right">
-            Add
-        </a>
+        <a href="#page-new-book" id="btn-compose" data-icon="plus" data-iconpos="right" data-inline="true" data-role="button" data-rel="dialog" data-transition="fade" class="ui-btn-right">Add</a>
+
         <h4>
             My Books
         </h4>
     </div>
     <div data-role="content">
-        <ul id="books-list"  data-role="listview" data-inset="false" >
+        <ul id="books-list" data-role="listview" data-inset="false">
             <li>
                 <h3>First Title</h3>
+
                 <p>First author</p>
             </li>
             <li>
                 <h3>Second Title</h3>
+
                 <p>Second author</p>
             </li>
         </ul>
     </div>
 </div>
 
-<div data-role="page" data-control-title="Add Book" id="addBook">
+<div data-role="page" data-control-title="Add Book" id="page-new-book">
     <div data-theme="b" data-role="header">
         <h3>
             Add a New Book

@@ -25,6 +25,46 @@
 
     <script src="https://codiqa.com/view/e8c2e845/js"></script>
 
+    <script src="https://apigee.com/usergrid/sdk/usergrid.0.10.5.js"></script>
+    <script type="text/javascript">
+
+        //https://github.com/timanglade/training/blob/gh-pages/02-read.html
+        //https://raw.github.com/timanglade/training/gh-pages/02-read.html
+        var apigee = new Usergrid.Client({
+            orgName:'theappchick',
+            appName:'sandbox'
+        });
+
+
+        // A Collection object that will be used to hold the list of books locally
+        var my_books = new Usergrid.Collection( { "client":apigee, "type":"books" } );
+
+        //http://api.usergrid.com/theappchick/sandbox/books
+        // Actual network call
+        my_books.fetch(
+
+                // Success Callback
+                function () {
+                    $('#books-list').empty();
+
+                    while ( my_books.hasNextEntity() ) {
+                        var current_book = my_books.getNextEntity();
+
+                        // Output the book on the page
+                        $('#books-list').append('<li><h3>'+current_book.get('Title')+'</h3><p>'+current_book.get('AUTHOR')+'</p></li>');
+                    }
+
+                    // Re-apply jQuery Mobile styles
+                    $('#books-list').listview('refresh');
+                },
+
+                // Failure Callback
+                function () { alert("read failed"); }
+        );
+
+
+    </script>
+
 </head>
 <body>
 <div data-role="page" data-control-title="Home" id="page1">
@@ -38,12 +78,12 @@
         </h4>
     </div>
     <div data-role="content">
-        <ul data-role="listview" data-divider-theme="h" data-inset="false">
-            <li data-theme="c">
+        <ul id="books-list"  data-role="listview" data-inset="false" >
+            <li>
                 <h3>First Title</h3>
                 <p>First author</p>
             </li>
-            <li data-theme="c">
+            <li>
                 <h3>Second Title</h3>
                 <p>Second author</p>
             </li>

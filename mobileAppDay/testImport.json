@@ -1,0 +1,44 @@
+//This is the format to import a collection of book objects into the book collections for example
+[
+    {
+        "type": "book",
+        "name": "book1",
+        "AUTHOR": "P.C",
+        "Title": "Alchemist"
+    },
+    {
+        "type": "book",
+        "name": "book2",
+        "AUTHOR": "Napolean Hill",
+        "Title": "Think & Grow Rich"
+    },
+    {
+        "AUTHOR": "J.R.R. Tolkien",
+        "metadata": {
+            "path": "/books/6be94c3a-f487-11e2-aa0b-c3943da9d4cf"
+        },
+        "Title": "The Lord of the Rings"
+    },
+    {
+        "type": "book",
+        "name": "book4",
+        "AUTHOR": "F. Scott Fitzgerald",
+        "Title": "The Great Gatsby"
+    },
+    {
+        " type": "book33",
+        "name": "book33",
+        "author": "Mark Twain",
+        "title": "Adventures of Huckleberry Finn"
+    },
+    {
+        "type": "book",
+        "author": "Test Author",
+        "title": "Test "
+    },
+    {
+        "type": "book",
+        "author": "Test Author 3",
+        "title": "Test Title 3"
+    }
+]

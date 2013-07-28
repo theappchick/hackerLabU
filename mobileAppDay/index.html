@@ -38,86 +38,103 @@
         // A Collection object that will be used to hold the list of books locally
         var my_books = new Usergrid.Collection({ "client": apigee, "type": "books" });
 
+        $(document).ready(function () {
+            $('#create-button').bind('click', createBook);
+        });
+
+        loadBooks();
+
         //http://api.usergrid.com/theappchick/sandbox/books
         // Actual network call
-        my_books.fetch(
 
-                // Success Callback
-                function () {
-                    $('#books-list').empty();
+        function loadBooks() {
+            my_books.fetch(
 
-                    while (my_books.hasNextEntity()) {
-                        var current_book = my_books.getNextEntity();
+                    // Success Callback
+                    function () {
+                        $('#books-list').empty();
 
-                        // Output the book on the page
-                        $('#books-list').append('<li><h3>' + current_book.get('Title') + '</h3><p>' + current_book.get('AUTHOR') + '</p></li>');
+                        while (my_books.hasNextEntity()) {
+                            var current_book = my_books.getNextEntity();
+
+                            var title = current_book.get('Title');
+                            title = author == undefined ? current_book.get('Title') : author;
+
+                            var author = current_book.get('AUTHOR');
+                            author = author == undefined ? current_book.get('author') : author;
+
+                            // Output the book on the page
+                            $('#books-list').append('<li><h3>' + title + '</h3><p>' + author + '</p></li>');
+                        }
+
+                        // Re-apply jQuery Mobile styles
+                        $('#books-list').listview('refresh');
+                    },
+
+                    // Failure Callback
+                    function () {
+                        alert("read failed");
                     }
+            );
+        }
 
-                    // Re-apply jQuery Mobile styles
-                    $('#books-list').listview('refresh');
-                },
+        function createBook() {
 
-                // Failure Callback
-                function () {
-                    alert("read failed");
+            new_book = { "title": $("#title-field").val(),
+                "author": $("#author-field").val() };
+
+            my_books.addEntity(new_book, function (error, response) {
+                if (error) {
+                    alert('write failed');
+                } else {
+                    $("#title-field").val(""), $("#author-field").val("");
+                    loadBooks();
+                    history.back();
                 }
-        );
+            });
+        }
 
 
     </script>
 
 </head>
 <body>
-<div data-role="page" data-control-title="Home" id="page-books-list">
-    <div data-theme="b" data-role="header">
-        <a href="#page-new-book" id="btn-compose" data-icon="plus" data-iconpos="right" data-inline="true" data-role="button" data-rel="dialog" data-transition="fade" class="ui-btn-right">Add</a>
 
-        <h4>
-            My Books
-        </h4>
+<div data-role="page" data-theme="c" id="page-books-list">
+    <div data-role="header" data-theme="b">
+        <h1>My Books</h1>
+        <a href="#page-new-book" id="btn-compose" data-icon="plus" data-iconpos="right" data-inline="true" data-role="button" data-rel="dialog" data-transition="fade" class="ui-btn-right">Add</a>
     </div>
     <div data-role="content">
-        <ul id="books-list" data-role="listview" data-inset="false">
+        <ul id="books-list"  data-role="listview" data-inset="false" >
             <li>
                 <h3>First Title</h3>
-
                 <p>First author</p>
             </li>
             <li>
                 <h3>Second Title</h3>
-
                 <p>Second author</p>
             </li>
         </ul>
     </div>
 </div>
 
-<div data-role="page" data-control-title="Add Book" id="page-new-book">
-    <div data-theme="b" data-role="header">
-        <h3>
-            Add a New Book
-        </h3>
+
+<div data-role="page" data-theme="b" id="page-new-book">
+    <div data-role="header" data-theme="b">
+        <h1>Add a New Book</h1>
     </div>
     <div data-role="content">
-        <div data-role="fieldcontain" data-controltype="textinput">
-            <label for="textinput1">
-                Title
-            </label>
-            <input name="" id="textinput1" placeholder="" value="" type="text">
-        </div>
-        <div data-role="fieldcontain" data-controltype="textinput">
-            <label for="textinput2">
-                Author
-            </label>
-            <input name="" id="textinput2" placeholder="" value="" type="text">
-        </div>
-        <a data-role="button" data-inline="true" data-rel="back" href="#addBook">
-            Cancel
-        </a>
-        <a data-role="button" data-inline="true" data-theme="b" href="#addBook">
-            Create
-        </a>
+        <form>
+            <label for="title-field">Title</label>
+            <textarea id="title-field"></textarea>
+            <label for="author-field">Author</label>
+            <textarea id="author-field"></textarea>
+        </form>
+        <a href="#page-books-list" data-role="button" data-theme="c" data-inline="true">Cancel</a>
+        <button id="create-button" data-inline="true">Create</button>
     </div>
 </div>
+
 </body>
 </html>
